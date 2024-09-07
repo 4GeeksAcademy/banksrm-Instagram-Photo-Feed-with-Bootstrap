@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rebekah's Instagram Photo Feed with Bootstrap</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>  
+    <div class="row">
+      <div class="col-12 justify-content-between">
+        <!-- Nav Bar -->
+        <nav class="navbar navbar-expand-lg bg-light">
+          <div class="container">
+
+            <!-- Instagram logo and label -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+              <i class="fa-brands fa-instagram mr-1"></i>
+              <span>Instagram</span>
+            </a>
+
+            <div class="d-flex" >
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-success me-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Create a new post
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <label for="message-text" class="col-form-label"><strong>Caption:</strong></label>
+                      <textarea class="form-control" id="message-text" placeholder="Add the caption of your post here"></textarea>
+                      <button type="button" class="btn btn-light btn-sm"><a><i class="fa-solid fa-camera"></i></a></button>
+                      <button type="button" class="btn btn-light btn-sm"><a><i class="fa-solid fa-location-dot"></i></a></button>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-success">Publish</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- Dropdown -->
+              <div class="dropdown">
+                <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <i class="fa-solid fa-gear"></i> 
+                </a>
+
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                    <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+       
+    <div class="row">
+      <!-- pictures buttons -->
+      <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="grid-tab" data-bs-toggle="tab" data-bs-target="#grid" type="button" role="tab" aria-controls="home" aria-selected="true"><i class="fa-solid fa-table-cells"></i></button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="column-tab" data-bs-toggle="tab" data-bs-target="#column" type="button" role="tab" aria-controls="profile" aria-selected="false"><i class="fa-regular fa-square"></i></button>
+        </li>      
+      </ul>
+
+      
+      <div class="tab-content" id="myTabContent">
+        <!-- pictures - GRID Setup -->
+        <div class="tab-pane fade show active" id="grid" role="tabpanel" aria-labelledby="grid-tab">
+
+          <div class="row justify-content-center mb-3">
+
+            <div class="col-sm-3 align-items-center pt-3">
+              <div class="card">
+                <img src="Dan_and_I.jpg">
+              </div>
+            </div>
+
+            <div class="col-sm-3 align-items-center">
+              <div class="card">
+                <img src="Cancer T-Shirt.jpg">
+              </div>
+            </div>
+            
+            <div class="col-sm-3 align-items-center">
+              <div class="card">
+                <img src="My Bike.jpeg">
+              </div>
+            </div>
+          </div>
+
+          <div class="row justify-content-center mb-3">
+            <div class="col-sm-3 align-items-center">
+              <div class="card">
+                <img src="Family Picture.jpg">
+              </div>
+            </div>
+  
+            <div class="col-sm-3 align-items-center">
+              <div class="card">
+                <img src="Colton MtnBk.jpg">
+              </div>
+            </div>
+            
+            <div class="col-sm-3 align-items-center">
+              <div class="card">
+                <img src="Wyatt_Trap.jpg">
+              </div>
+            </div>
+          </div>
+
+          <div class="row justify-content-center mb-3">
+            <div class="col-sm-3 align-items-center">
+              <div class="card">
+                <img src="My_Family.jpg">
+              </div>
+            </div>
+
+            <div class="col-sm-3 align-items-center">
+              <div class="card">
+                <img src="ERCC Team.jpg">
+              </div>
+            </div>
+            
+            <div class="col-sm-3 align-items-center">
+              <div class="card">
+                <img src="Motorcycle.jpg">
+              </div>
+            </div>
+          </div>
+
+        </div> 
+
+        <!-- pictures - Columun Setup -->
+        <div class="tab-pane fade" id="column" role="tabpanel" aria-labelledby="column-tab">
+          
+          <div class="row justify-content-center">
+            <div class="card m-3" style="width: 35rem;">
+              <div class="card-body justify-content-between d-flex">
+                <p class="fs-2 m-0">My Husband and I</p>
+                <p class="fs-6 fw-lighter m-0">06/18</p>
+              </div>
+              <img src="Dan_and_I.jpg">
+              <div class="card-body pt-1">
+                <p class="fs-6 fw-bold m-1">207 Likes</p>
+                <p class="fs-6">This is my husband and I. We have been married over 20 years.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="card m-3" style="width: 35rem;">
+              <div class="card-body justify-content-between d-flex">
+                <p class="fs-2 m-0">We Love Motorcycles</p>
+                <p class="fs-6 fw-lighter m-0">06/24</p>
+              </div>
+              <img src="Motorcycle.jpg">
+              <div class="card-body pt-1">
+                <p class="fs-6 fw-bold m-1">204 Likes</p>
+                <p class="fs-6">We love motorcycles and go to Sturgis frequently on our Yamaha Roadstar.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="card m-3" style="width: 35rem;">
+              <div class="card-body justify-content-between d-flex">
+                <p class="fs-2 m-0">Our Family</p>
+                <p class="fs-6 fw-lighter m-0">08/20</p>
+              </div>
+              <img src="My_Family.jpg">
+              <div class="card-body pt-1">
+                <p class="fs-6 fw-bold m-1">243 Likes</p>
+                <p class="fs-6">This is our family. We have two boys.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="card m-3" style="width: 35rem;">
+              <div class="card-body justify-content-between d-flex">
+                <p class="fs-2 m-0">Families That Play Together...</p>
+                <p class="fs-6 fw-lighter m-0">07/22</p>
+              </div>
+              <img src="Ride_Together.jpg">
+              <div class="card-body pt-1">
+                <p class="fs-6 fw-bold m-1">403 Likes</p>
+                <p class="fs-6">We do lots of activities together as a family. We ride dirtbikes together and ride mountainbikes together. We go camping and attend races as a family.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="card m-3" style="width: 35rem;">
+              <div class="card-body justify-content-between d-flex">
+                <p class="fs-2 m-0">Our Mountainbike Team</p>
+                <p class="fs-6 fw-lighter m-0">08/24</p>
+              </div>
+              <img src="ERCC Team.jpg">
+              <div class="card-body pt-1">
+                <p class="fs-6 fw-bold m-1">134 Likes</p>
+                <p class="fs-6">My husband and I have been coaching our sons' high-school mountain bike team, Elk River Composite, for a few years.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="card m-3" style="width: 35rem;">
+              <div class="card-body justify-content-between d-flex">
+                <p class="fs-2 m-0">Wyatt's High School Trap Team</p>
+                <p class="fs-6 fw-lighter m-0">10/22</p>
+              </div>
+              <img src="Wyatt_Trap.jpg">
+              <div class="card-body pt-1">
+                <p class="fs-6 fw-bold m-1">123 Likes</p>
+                <p class="fs-6">We also help coach our youngest son's trap team, North Lakes Academy Trap Team</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+          
+            
+
+           
+      </div>   
+    </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+</html>
